@@ -1,5 +1,6 @@
 # Small-Projects
 
-### These are practical projects. ![image](https://user-images.githubusercontent.com/41086746/134816081-81589c3d-4fd2-4af2-8919-d11a379ee745.png)
+### These are practical projects. ![image](https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/000000/external-coding-seo-and-media-flatart-icons-flat-flatarticons-1.png)
+
 
 
