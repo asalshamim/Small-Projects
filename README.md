@@ -1,3 +1,3 @@
 # Small-Projects
 
-### These are practical projects.
+### These are practical projects. 
