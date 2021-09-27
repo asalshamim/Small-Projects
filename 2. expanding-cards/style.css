@@ -38,6 +38,7 @@ body{
 }
 .panel.active{
     flex: 5;
+  padding-top: 20px;
 }
 .panel.active h3{
     opacity: 1;
@@ -50,4 +51,4 @@ body{
     }
     
     
-}
+} 
