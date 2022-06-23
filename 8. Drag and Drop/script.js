@@ -7,7 +7,12 @@ const richestPeople = [
     'Bernard Arnault',
     'Larry Ellison',
     'Mark Zuckerberg',
-    'Michael Bloomberg'
+    'Michael Bloomberg',
+    'Emma Bloomberg',
+    'Melanie Craft',
+    'Steve Ballmer',
+    'Sergey Brin'
+
 ];
 
 // Store listitems
@@ -18,12 +23,23 @@ let dragStartIndex;
 
 createList();
 
+const number = [1, 3, 110, 40, 302];
+console.log(number.sort(function (a, b) {
+    return a - b;
+}));
+
 // Insert List Items into Dom
 
 function createList() {
     [...richestPeople]
+        .map(a => ({ value: a, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(a => a.value)
         .forEach((person, index) => {
+           // console.log(person);
             const listItem = document.createElement('li');
+
+           // listItem.classList.add('over');
             listItem.setAttribute('data-index', index);
 
             listItem.innerHTML = `
@@ -33,7 +49,7 @@ function createList() {
             <i class ="fas fa-grip-lines"></i>
             </div>
             `;
-            listItem.push(listItem);
+            listItems.push(listItem);
             draggable_list.appendChild(listItem);
     });
 }
