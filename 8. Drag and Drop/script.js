@@ -51,5 +51,53 @@ function createList() {
             `;
             listItems.push(listItem);
             draggable_list.appendChild(listItem);
+        });
+    
+    addEventListeners();
+}
+
+function dragStart() {
+    //console.log('Event: ', 'dragstart');
+
+    dragStartIndex = +this.closest('li').getAttribute('data-index');
+    console.log(dragStartIndex);
+}
+
+function dragEnter() {
+   // console.log('Event: ', 'dragenter');
+    this.createList.add('over');
+}
+
+function dragLeave() {
+    //console.log('Event: ', 'dragleave');
+    this.createList.remove('over');
+}
+
+function dragOver() {
+    //console.log('Event: ', 'dragover');
+}
+
+function dragDrop() {
+   // console.log('Event: ', 'drop');
+}
+
+function addEventListeners() {
+    const draggables = document.querySelectorAll('.draggable');
+    const dragListItems = document.querySelectorAll('.draggable-list li');
+
+    draggables.forEach(draggable => {
+        draggable.addEventListener('dragstart', dragStart);
+
     });
+
+    dragListItems.forEach(item => {
+        item.addEventListener('dragover', dragOver);
+        item.addEventListener('drop', dragDrop);
+        item.addEventListener('dragenter', dragEnter);
+        item.addEventListener('dragleave', dragLeave);
+        
+    });
+
+
+    
 }
